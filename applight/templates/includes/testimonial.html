@@ -1,0 +1,45 @@
+{% load static %}
+
+<!-------Testimonial Start------->
+<section class="testimonial section-padding" data-scroll-index='4'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center white">
+          <h3>{{block.0.title}}</h3>
+          <span class="line"></span>
+          <p class="white">{{block.0.description}}</p>
+        </div>
+
+        <div class="section-content">
+          <div class="row">
+            <div class="offset-md-2 col-md-8 col-sm-12">
+              <div class="slider">
+                {% for t in testimonials %}
+                  <div class="slider-item">
+                    <div class="test-img">
+                      <img 
+                        src="{{t.t_img.url}}" 
+                        alt="{{t.t_full_name}}" 
+                        width="157" 
+                        height="157"
+                      >
+                    </div>
+                    <div class="test-text">
+                      <span class="title">
+                        <span>{{t.t_full_name}}</span>
+                        {{t.t_role}}
+                      </span>
+                      {{t.t_review}}
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-------Testimonial End------->

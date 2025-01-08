@@ -1,0 +1,48 @@
+{% load static %}
+
+<!-------Banner Start------->
+<section class="banner" data-scroll-index='0'>
+  <div class="banner-overlay" style="position: relative;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+          <div class="banner-text">
+            <h2 class="white">{{banner.title}}</h2>
+            <h6 class="white">{{banner.description}}</h6>
+            <p class="banner-text white">{{banner.content}}</p>
+            <ul>
+              <li>
+                <a href="{{banner.ios_url}}">
+                  <img 
+                    src="{{banner.ios_img.url}}" 
+                    class="wow fadeInUp"
+                    data-wow-delay="0.4s" 
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="{{banner.android_url}}">
+                  <img 
+                    src="{{banner.android_img.url}}" 
+                    class="wow fadeInUp"
+                    data-wow-delay="0.7s" 
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12"> 
+          <img 
+            src="{{banner.banner_img.url}}"
+            class="img-fluid wow fadeInUp" /> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="svg-wave"> 
+    <img class="svg-hero" style="width: 100%;" src="{% static 'img/applight-wave.svg' %}">
+  </span>
+</section>
+
+  <!-------Banner End------->

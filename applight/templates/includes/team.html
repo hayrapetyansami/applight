@@ -1,0 +1,30 @@
+{% load static %}
+
+<!-------Team Start------->
+<section class="team section-padding" data-scroll-index='3'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h3>{{block.2.title}}</h3>
+          <span class="line"></span>
+          <p>{{block.2.description}}</p>
+        </div>
+        <div class="section-content text-center">
+          <div class="row">
+            {% for t in team %}
+              <div class="col-md-4">
+                <div class="team-detail wow bounce" data-wow-delay="{{t.delay}}"> 
+                  <img src="{{t.member_img.url}}" class="img-fluid" />
+                  <h4>{{t.member_full_name}}</h4>
+                  <p>{{t.member_position}}</p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------Team End------->

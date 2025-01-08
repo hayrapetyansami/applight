@@ -1,0 +1,25 @@
+<!-------FAQ Start------->
+<section class="faq section-padding prelative" data-scroll-index='5'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h3>{{block.4.title}}</h3>
+          <span class="line"></span>
+          <p>{{block.4.description}}</p>
+        </div>
+        <div class="section-content">
+          <div class="row">
+            {% for f in faq %}
+              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="{{f.delay}}">
+                <h4>{{f.title}}</h4>
+                <p>{{f.description}}</p>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------FAQ End------->
